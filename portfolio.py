@@ -25,7 +25,7 @@ class ContackMeForm(FlaskForm):
 	send_message = SubmitField('Send Message')
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '6c6958bc19ee93f0596085fae014ed9a'
+app.config['SECRET_KEY'] = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/users'
 mongo = PyMongo(app)
 
