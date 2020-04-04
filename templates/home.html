@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- FONT FAMILY -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <!-- CSS STARTS HERE -->
+
+    <style>
+
+       body {
+              background-color: rgb(239, 239, 239);
+              max-width: 1170px;
+              margin: auto auto;
+              padding: 0;
+            }
+
+        h1 {
+              padding-top:2px;
+              font-family: 'Luckiest Guy', cursive;
+           }
+
+        h5 {
+              font-family: 'Karla', cursive;
+           }
+
+        ul {
+              font-family: 'Karla', cursive;
+           }
+
+    section {
+              padding-left: 200px;
+              margin-top: 5px;
+            }
+
+        h2  {
+              font-family: 'Luckiest Guy'
+            }
+
+    </style>
+
+<title>Portfolio | Siva Murugan </title>
+</head>
+<body>
+
+    <div class="container">
+
+
+      
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+      {% if messages %}
+
+        {% for message in messages %}
+
+          <div class="alert alert-{{ category }}">
+
+            {{ message }}
+            
+          </div>
+
+        {% endfor %}
+
+      {% endif %}
+
+    {% endwith %}
+
+
+
+        <h1 class="text-center pt-3"> Hello, I'm <b class="text-danger">Siva Murugan.</b></h1>
+        <h1 class="text-center pt-3">Professional python Developer</h1>
+
+    </div>
+
+     <div class="container-fluid">
+        <br><br>
+        <h4 class="text-primary"><b>About Me!</b></h4>
+        <h5 class="pt-2">I am an enthusiatic python programmer, believe in 
+        self learning and help others to learn to code. 
+        I love the language because of it's readability and easy to understand syntax style. Python has a great standard library with many hidden gems I did not know about until I took the time to walk through the list of all available functions, constants, types, and much more. I do like <b>HTML, CSS, Bootstrap</b> and Python <b>Flask</b></a> framework. I like flask framework for it's simplicity and easy to build website's with ease.</h5><br>
+
+        <h4 class="text-primary"><b>Education</b></h4>
+
+      <ul><br>
+          <h5 class="pt-2">University and College Information,</h5>
+          <a href="https://www.unom.ac.in/"><h5>University Of Madras</h5></a>
+          <a href="http://www.dgvaishnavcollege.edu.in/dgvc_new/"><h5>Dwaraga Doss Goverdan Doss Vaishnav College Chennai (Autonomous)</h5></a>
+          <li class="pt-2"><h5>Bsc In Physics With Computer Applications From 2013-2016</h5></li>
+        <ul>
+          <li>
+          <p class="text-success">Aggregate 71%</p>
+          </li>
+        </ul>
+        <li class="pt-2"><h5>Msc In Information Technology From 2016-2018</h5></li>
+
+        <ul>
+          <li>
+            <p class="text-success">Aggregate 80%</p>
+          </li>
+        </ul>
+
+      </ul>
+      <br>
+      <h4 class="text-primary"><b>Work Experience</b></h4>
+
+        <ul>
+
+          <li class="pt-2"><h5>Former Python Developer at Zilogic Systems
+            From 2019 May to 2020 Feb.<br>
+            Worked, Mostly related To Embedded Products And Test Frameworks.
+
+          <li class="pt-3"><h5>Currently Working At Corestack Io From 2020 Feb To Present, As Cloud Security Python Developer.<br>
+          Working Mostly Under MongoDb queries, Microsoft Azure, Amazon Web Services
+          And API's. <br>
+          For More About Corestack Io, Visit <a href="https://corestack.io">Corestack.io</a>
+          </h5></li>
+        </ul><br>
+
+      <h4 class="text-primary"><b>Tools& Technologies</b></h4>
+      <ul>
+        <li class="pt-2"><h5>Python</h5></li>
+        <li class="pt-2"><h5>Flask</h5></li>
+        <li class="pt-2"><h5>MongoDb</h5></li>
+        <li class="pt-2"><h5>HTML</h5></li>
+        <li class="pt-2"><h5>CSS</h5></li>
+        <li class="pt-2"><h5>Bootstrap</h5></li>
+        <li class="pt-2"><h5>Git Version Control System</h5></li>
+        <li class="pt-2"><h5>Microsoft Azure</h5></li>
+        <li class="pt-2"><h5>Amazon Web Services(AWS)</h5></li>
+        <li class="pt-2"><h5>Sublime Text & Pycharm</h5></li>
+      </ul>
+          </h5></li>
+        </ul><br>
+
+      <!-- FORMS -->
+      
+
+      <section>
+        <div>
+          <h2 class="text-secondary"><b>Contact Me</b></h2><br>
+        </div>
+  <div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <form method="POST" action="/">
+              
+              {{ form.hidden_tag() }}
+              {{ form.csrf_token }}
+
+              <fieldset class="form-group">
+
+                      <div class="form-group">
+                    
+                          {{ form.Firstname.label(class="form-control-label") }}
+                          {{ form.Firstname(class="form-control form-control-lg")}}  
+
+                      </div>
+
+                      <div class="form-group">
+                    
+                          {{ form.Email.label(class="form-control-label") }}
+                          {{ form.Email(class="form-control form-control-lg")}}  
+
+                      </div>
+
+                      <div class="form-group">
+                    
+                          {{ form.Subject.label(class="form-control-label") }}
+                          {{ form.Subject(class="form-control form-control-lg")}}  
+
+                      </div>
+
+                      <div class="form-group">
+
+                        {{ form.Message.label }}
+                        {{ form.Message(class="form-control form-control-lg mb-2") }}
+                        
+                        {{ form.send_message(class="form-control mt-3 pb-3 pt-3
+                        btn btn-info") }}
+
+                        <br><br>
+
+                        <p class="text-danger">* Please check your e-mail after submitting the form.</p>
+
+
+                      </div>
+
+              </fieldset>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+
+</div>
+      <!-- CDN STARTS HERE -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
