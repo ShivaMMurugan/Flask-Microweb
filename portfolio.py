@@ -1,19 +1,22 @@
+from datetime import datetime
+import smtplib
+import os
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm, Form
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email
 from flask_pymongo import PyMongo
-from datetime import datetime
-import smtplib
-import os
+
 
 # DOMAIN_PASSWORD.
 
+'''Email ID and Passwords are stored in 
+   enviorment variable'''
 
 EMAIL_ADDRESS = os.environ.get('DOMAIN_NAME')
 EMAIL_PASSWORD = os.environ.get('DOMAIN_PASS')
 
-class ContackMeForm(FlaskForm):
+class ContactMeForm(FlaskForm):
 
 	Firstname = StringField('Firstname',
 				validators=[DataRequired(), Length(min=2, max=20)])
@@ -25,13 +28,13 @@ class ContackMeForm(FlaskForm):
 	send_message = SubmitField('Send Message')
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+app.config['SECRET_KEY'] = '6c6958bc19ee93f0596085fae014ed9a'
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/users'
 mongo = PyMongo(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def flaskBlog():
-	form = ContackMeForm()
+	form = ContactMeForm()
 	if request.method == 'POST':
 		fname = request.form.get('Firstname')
 		email = request.form.get('Email')
